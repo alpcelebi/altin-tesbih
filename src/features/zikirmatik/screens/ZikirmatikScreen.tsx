@@ -7,8 +7,10 @@ import { databaseService } from '../../../core/database';
 import { ZikirHistory } from '../../../core/types';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { BannerAd } from '../../../components/Ads/BannerAd';
 import { useInterstitialAd } from '../../../hooks/useInterstitialAd';
+import { BannerAd } from '../../../components/Ads/BannerAd';
+
+const BANNER_HEIGHT = 70;
 
 export const ZikirmatikScreen = () => {
     const theme = useTheme();
@@ -165,8 +167,14 @@ export const ZikirmatikScreen = () => {
         : 0;
 
     return (
-        <Screen safeArea style={styles.container}>
-            {/* Header */}
+        <Screen safeArea withAd={false} style={styles.container}>
+            <ScrollView
+                style={styles.scrollContainer}
+                contentContainerStyle={[styles.scrollContent, { paddingBottom: BANNER_HEIGHT + 16 }]}
+                showsVerticalScrollIndicator={false}
+                keyboardShouldPersistTaps="handled"
+            >
+                {/* Header */}
             <View style={styles.header}>
                 <TouchableOpacity
                     style={[styles.zikirSelector, { backgroundColor: theme.colors.surface }]}
@@ -287,6 +295,8 @@ export const ZikirmatikScreen = () => {
                     refreshControl={
                         <RefreshControl refreshing={loading} onRefresh={loadTodayHistory} />
                     }
+                    nestedScrollEnabled
+                    showsVerticalScrollIndicator={false}
                 >
                     {todayHistory.length > 0 ? (
                         todayHistory.map((item) => (
@@ -331,6 +341,8 @@ export const ZikirmatikScreen = () => {
                     )}
                 </ScrollView>
             </View>
+
+            </ScrollView>
 
             {/* Zikir List Modal */}
             <Modal
@@ -467,15 +479,23 @@ export const ZikirmatikScreen = () => {
             </Modal>
 
             {/* Banner Ad */}
-            <BannerAd />
+            <View style={styles.bannerContainer}>
+                <BannerAd />
+            </View>
         </Screen>
     );
 };
-
+ 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 20,
+    },
+    scrollContainer: {
+        flex: 1,
+    },
+    scrollContent: {
+        flexGrow: 1,
     },
     header: {
         marginBottom: 40,
@@ -666,5 +686,13 @@ const styles = StyleSheet.create({
     emptyHistory: {
         padding: 16,
         alignItems: 'center',
+    },
+    bannerContainer: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        alignItems: 'center',
+        paddingTop: 8,
     },
 });
