@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView, Switch, TouchableOpacity, Alert } from 'react-native';
+import { View, StyleSheet, ScrollView, Switch, TouchableOpacity, Alert, Linking } from 'react-native';
 import { Screen, Text } from '../../../shared/ui';
 import { useSettingsStore } from '../../../store';
 import { useTheme, useTranslation } from '../../../core/hooks';
@@ -158,7 +158,7 @@ export const SettingsScreen = () => {
                         onPress={handleClearData}
                     />
                 </View>
-
+ 
                 {/* About */}
                 <Text variant="h4" weight="bold" style={styles.sectionTitle} color={theme.colors.primary}>
                     {t.settings.about}
@@ -169,6 +169,17 @@ export const SettingsScreen = () => {
                         icon="information-circle"
                         type="info"
                         value="1.0.0"
+                    />
+                    <SettingItem
+                        title={t.settings.privacyPolicy}
+                        icon="shield-checkmark"
+                        type="button"
+                        onPress={() => {
+                            const url = 'https://alpcelebi.github.io/altin-tesbih-privacy/index.html';
+                            Linking.openURL(url).catch(() => {
+                                Alert.alert(t.common.error, 'Could not open privacy policy');
+                            });
+                        }}
                     />
                 </View>
             </ScrollView>

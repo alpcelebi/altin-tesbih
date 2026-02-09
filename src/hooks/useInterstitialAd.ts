@@ -1,8 +1,8 @@
 import { useEffect, useState, useCallback } from 'react';
 import { InterstitialAd, AdEventType, TestIds } from 'react-native-google-mobile-ads';
 
-// Geliştirme aşamasında TestIds.INTERSTITIAL kullanıyoruz.
-const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-3940256099942544/1033173712';
+// TEST MODU: Her zaman test reklamları kullanıyoruz
+const adUnitId = TestIds.INTERSTITIAL;
 
 let interstitial: InterstitialAd | null = null;
 

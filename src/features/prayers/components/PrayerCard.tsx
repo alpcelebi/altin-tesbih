@@ -11,7 +11,7 @@ interface PrayerCardProps {
 
 export const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, onToggleFavorite }) => {
     const theme = useTheme();
-    const { t } = useTranslation();
+    const { t, locale } = useTranslation();
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
@@ -23,7 +23,7 @@ export const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, onToggleFavorite
             <View style={styles.header}>
                 <View style={styles.titleContainer}>
                     <Text style={[styles.title, { color: theme.colors.text }]}>
-                        {t.locale === 'en' && prayer.title_en ? prayer.title_en : prayer.title_tr}
+                        {locale === 'en' && prayer.title_en ? prayer.title_en : prayer.title_tr}
                     </Text>
                     {prayer.source_detail && (
                         <Text style={[styles.source, { color: theme.colors.textSecondary }]}>
@@ -64,7 +64,7 @@ export const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, onToggleFavorite
                     </View>
 
                     {/* Translation - Turkish or English based on language */}
-                    {t.locale === 'en' && prayer.english_translation ? (
+                    {locale === 'en' && prayer.english_translation ? (
                         <View style={styles.section}>
                             <Text style={[styles.label, { color: theme.colors.textSecondary }]}>
                                 {t.prayers.labels.english || 'English'}:

@@ -60,6 +60,7 @@ export const tr = {
         labels: {
             arabic: 'Arapça',
             turkish: 'Türkçe',
+            english: 'İngilizce',
             transliteration: 'Okunuşu',
             source: 'Kaynak',
         },
@@ -102,6 +103,7 @@ export const tr = {
 
         about: 'Hakkında',
         version: 'Sürüm',
+        privacyPolicy: 'Gizlilik Politikası',
         rateApp: 'Uygulamayı Değerlendir',
         shareApp: 'Uygulamayı Paylaş',
 
@@ -110,6 +112,12 @@ export const tr = {
         clearDataConfirm: 'Tüm veriler silinecek. Emin misiniz?',
         export: 'Dışa Aktar',
         import: 'İçe Aktar',
+    },
+
+    prayerTimes: {
+        selectCity: 'Şehir Seç',
+        searchCity: 'Şehir ara...',
+        useCurrentLocation: 'Mevcut Konumu Kullan',
     },
 
     errors: {

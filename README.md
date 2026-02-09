@@ -1,18 +1,19 @@
-# Zikirmatik & Prayer Times App
+# Altın Tesbih (Golden Tasbih) - Prayer Times App
 
-A premium, feature-rich Zikirmatik and Prayer Times application built with React Native (Expo), TypeScript, and SQLite.
+A premium, feature-rich Islamic prayer counter (Zikirmatik/Tasbih) and Prayer Times application built with React Native (Expo), TypeScript, and SQLite.
 
 ## Features
 
-- **Zikirmatik**: Advanced counter with haptic feedback, target setting, and history tracking.
+- **Digital Tasbih (Zikirmatik)**: Advanced counter with haptic feedback, target setting, and history tracking.
 - **Prayer Times**: Accurate prayer times using Diyanet API with offline fallback (Adhan).
+- **Prayer Collection**: Comprehensive collection of Islamic prayers (Duas) in Arabic, Turkish, and transliteration.
 - **Statistics**: Visual history of your zikirs.
 - **Settings**: Dark/Light mode, English/Turkish language support, and customization.
 - **Premium UI**: Smooth animations, glassmorphism effects, and clean design.
 
 ## Tech Stack
 
-- **Framework**: React Native (Expo SDK 50)
+- **Framework**: React Native (Expo SDK 54)
 - **Language**: TypeScript
 - **State Management**: Zustand
 - **Database**: Expo SQLite (Next Gen)

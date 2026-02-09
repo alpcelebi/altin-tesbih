@@ -2,7 +2,7 @@
   "expo": {
     "name": "Altın Tesbih",
     "slug": "altin-tesbih",
-    "version": "1.0.0",
+    "version": "4.0.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -17,6 +17,7 @@
     },
     "android": {
       "package": "com.altintesbih.app",
+      "versionCode": 7,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -32,7 +33,7 @@
       [
         "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "androidAppId": "ca-app-pub-2797060940023450~4126974503",
           "iosAppId": "ca-app-pub-3940256099942544~1458002511"
         }
       ]

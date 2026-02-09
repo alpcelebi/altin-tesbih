@@ -1,4 +1,4 @@
-import { Zikir } from '../types';
+import { Zikir, City } from '../types';
 
 // Default Zikir List
 export const DEFAULT_ZIKIRS: Omit<Zikir, 'id' | 'createdAt'>[] = [
@@ -38,6 +38,14 @@ export const DEFAULT_ZIKIRS: Omit<Zikir, 'id' | 'createdAt'>[] = [
         name: 'La ilahe illallah',
         arabicText: 'لَا اِلٰهَ اِلَّا اللّٰهُ',
         transliteration: 'La ilahe illallah',
+        count: 0,
+        target: 100,
+        isCustom: false,
+    },
+    {
+        name: 'Salavat',
+        arabicText: '',
+        transliteration: 'Allahumme salli ala seyyidina Muhammed',
         count: 0,
         target: 100,
         isCustom: false,
@@ -82,3 +90,6 @@ export const DEFAULT_SETTINGS = {
     hapticEnabled: true,
     notificationsEnabled: true,
 };
+
+// Turkish Cities (minimal list for prayer times)
+export const TURKISH_STATES: City[] = [];

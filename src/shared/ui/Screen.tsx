@@ -32,8 +32,8 @@ interface ScreenProps extends ViewProps {
     withAd?: boolean;
 }
 
-// Use Test ID for development
-const adUnitId = __DEV__ && TestIds ? TestIds.BANNER : 'ca-app-pub-xxxxxxxxxxxxx/yyyyyyyyyy';
+// TEST MODU: Her zaman test reklamları kullanıyoruz
+const adUnitId = TestIds ? TestIds.BANNER : '';
 
 export const Screen: React.FC<ScreenProps> = ({
     children,

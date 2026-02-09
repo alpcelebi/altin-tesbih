@@ -1,6 +1,6 @@
 {
-  "name": "zikirmatik",
-  "version": "1.0.0",
+  "name": "altin-tesbih",
+  "version": "4.0.0",
   "main": "index.ts",
   "scripts": {
     "start": "expo start",

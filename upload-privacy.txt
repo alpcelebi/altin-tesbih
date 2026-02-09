@@ -1,0 +1,20 @@
+# GitHub'a Privacy Policy Yükleme Komutları
+
+# Repository oluşturduktan sonra bu komutları çalıştırın:
+
+cd "c:\Users\90552\Desktop\Mobile Apps\zikirmatik" 
+
+# Git başlat (sadece privacy policy için ayrı bir klasör)
+mkdir privacy-policy
+copy PRIVACY_POLICY.html privacy-policy\index.html
+cd privacy-policy
+
+git init
+git add index.html
+git commit -m "Add privacy policy"
+git branch -M main 
+
+# Repository URL'inizi buraya yazın (örnek):
+# git remote add origin https://github.com/alpcelebi/altin-tesbih-privacy.git
+
+git push -u origin main

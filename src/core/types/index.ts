@@ -67,6 +67,14 @@ export interface Statistics {
 
 export type ThemeMode = 'light' | 'dark';
 
+export interface City {
+    id: string;
+    name: string;
+    stateName: string;
+    latitude: number;
+    longitude: number;
+}
+
 export interface Theme {
     colors: {
         primary: string;

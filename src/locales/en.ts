@@ -103,6 +103,7 @@ export const en = {
 
         about: 'About',
         version: 'Version',
+        privacyPolicy: 'Privacy Policy',
         rateApp: 'Rate App',
         shareApp: 'Share App',
 
@@ -111,6 +112,12 @@ export const en = {
         clearDataConfirm: 'All data will be deleted. Are you sure?',
         export: 'Export',
         import: 'Import',
+    },
+
+    prayerTimes: {
+        selectCity: 'Select City',
+        searchCity: 'Search city...',
+        useCurrentLocation: 'Use Current Location',
     },
 
     errors: {
